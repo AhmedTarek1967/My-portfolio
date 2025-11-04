@@ -1,4 +1,4 @@
-#contact{
+#resume {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,19 +7,11 @@
     transform: translateY(30px);
     animation: fadeInUp 5s ease forwards;
     margin-top: 10px;
-    padding-top: 10px ;
+    padding-top: 20px;
+    padding-bottom:20px ;
     font-size: 19px;
 }
-.social {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    flex-wrap: wrap;
-        margin-top: 10px;
-}
-
-/* الكتلة لكل أيقونة */
-.icons a {
+.myresume-div a {
     text-decoration: none;
     color: #000;
     font-size: 22px;
@@ -31,20 +23,10 @@
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* حجم الأيقونات */
-.icons img {
-    width: 35px;
-    height: 35px;
-    transition: transform 0.4s ease;
-}
-
-/* حركة الأيقونة عند الـ hover */
-.icons a:hover img {
+.myresume-div a:hover img {
     transform: scale(1.15) rotate(5deg);
 }
-
-/* الخط اللي يظهر تحت النص */
-.icons a::after {
+.myresume-div a::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -55,15 +37,11 @@
     transition: width 0.4s ease;
 }
 
-/* عند المرور بالماوس */
-.icons a:hover {
+.myresume-div a:hover {
     color: #007bff;
     transform: translateY(-5px);
 }
 
-.icons a:hover::after {
+.myresume-div a:hover::after {
     width: 100%;
-}
-footer{
-    font-size: 12px;
 }
