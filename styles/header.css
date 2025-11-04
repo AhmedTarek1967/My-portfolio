@@ -1,0 +1,158 @@
+header {
+
+    display: flex;
+    flex-direction: row;
+
+    height: 150px;
+    padding-left: 40px;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    
+
+}
+
+.profile-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    overflow: visible;
+    z-index: 1000;
+}
+
+header .profile-picture img {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    will-change: transform;
+    cursor: pointer;
+
+   
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 3s ease forwards;    
+    transition: all 1s ease-in-out;
+}
+
+
+header .profile-picture img:hover {
+    width: 200px;
+    height: 200px;
+    transform: scale(1.12);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    
+}
+
+
+
+
+/* info */
+.info {
+    flex-grow: 3;
+    justify-content: left;
+
+}
+
+.info .job p {
+    padding-top: 10px;
+    font-size: 18px;
+    opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 2s ease forwards;
+}
+
+.name {
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 2s ease forwards;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* nav bar */
+
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.nav-element {
+    font-size: 17px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-element a{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 2s ease forwards;
+}
+.nav-element a:hover{
+
+    transform: scale(1.12);
+    transition: all 1s ease-in-out;
+}
+
+/* الخط المتحرك تحت الكلمة */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.4s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+.icon {
+    width: 13px;
+    height: 10px;
+    margin-top: 13px;
+    margin-right: 2px;
+    
+}
+.nav-element:hover{
+    transform: scale(1.15) rotate(5deg);
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
